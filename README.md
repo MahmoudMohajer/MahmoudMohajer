@@ -11,7 +11,7 @@
 
 - 📝 I regularly write articles on [https://medium.com/@mahmohajer3](https://medium.com/@mahmohajer3)
 
-- 📫 How to reach me **mahmohajer3@gmail.com**
+- 📫 How to reach me **mahmohajer@proton.me**
 
 - 📄 Know about my experiences [https://drive.google.com/file/d/1Or-U4aW7nM9By7lMMo_cGfjTsPnsjq_7/view](https://drive.google.com/file/d/1Or-U4aW7nM9By7lMMo_cGfjTsPnsjq_7/view)
 
