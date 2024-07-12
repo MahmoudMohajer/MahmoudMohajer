@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Mahmoud Mohajer</h1>
-<h3 align="center">I'm a curious Machine Learning Engineer.</h3>
+<h3 align="center">curious Machine Learning Engineer, trying to make sense of Intelligence through imitating one.</h3>
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=mahmoudmohajer" alt="mahmoudmohajer" /></a> </p>
 
