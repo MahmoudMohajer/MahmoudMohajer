@@ -30,28 +30,25 @@ const projects = [
 
 const blogPosts = [
   {
-    id: "gpu-memory-hierarchies",
     title: "A First-Principles Guide to GPU Memory Hierarchies",
     summary: "Breaking down how registers, shared memory, L1/L2 caches, and global memory operate within the GPU architecture. Explores latency mitigation strategies and coalesced memory access.",
     date: "May 2026",
     readTime: "8 min read",
-    file: "posts/gpu-memory-hierarchies.txt"
+    link: "blog/gpu-memory-hierarchies.html"
   },
   {
-    id: "backpropagation-gradients",
     title: "Backpropagation Math: Manual Attention Gradients",
     summary: "Deriving the mathematical gradients of scaled dot-product attention step-by-step. A reference sheet written during the building of a custom transformer implementation.",
     date: "April 2026",
     readTime: "12 min read",
-    file: "posts/backpropagation-gradients.txt"
+    link: "blog/backpropagation-gradients.html"
   },
   {
-    id: "decentralized-verification",
     title: "Decentralized Machine Learning: Verification Challenges",
     summary: "An analysis of the trust assumptions in decentralized model training. Looks at gradient validation, zero-knowledge verification, and cryptographic proofs of compute.",
     date: "March 2026",
     readTime: "6 min read",
-    file: "posts/decentralized-verification.txt"
+    link: "blog/decentralized-verification.html"
   }
 ];
 
@@ -194,7 +191,7 @@ function renderBlogPosts() {
   blogPosts.forEach(post => {
     const card = document.createElement("a");
     card.className = "note-card";
-    card.setAttribute("href", "#");
+    card.setAttribute("href", post.link);
     
     const cardTop = document.createElement("div");
     cardTop.className = "card-top";
@@ -231,204 +228,7 @@ function renderBlogPosts() {
     card.appendChild(cardTop);
     card.appendChild(footerLink);
     
-    // Open reader modal on click
-    card.addEventListener("click", (e) => {
-      e.preventDefault();
-      openBlogReader(post);
-    });
-    
     container.appendChild(card);
-  });
-}
-
-// Blog Modal Reader Actions
-function formatParagraph(text) {
-  const p = document.createElement("p");
-  let i = 0;
-  while (i < text.length) {
-    if (text.startsWith("**", i)) {
-      const end = text.indexOf("**", i + 2);
-      if (end !== -1) {
-        const strong = document.createElement("strong");
-        strong.textContent = text.substring(i + 2, end);
-        p.appendChild(strong);
-        i = end + 2;
-        continue;
-      }
-    }
-    if (text.startsWith("`", i)) {
-      const end = text.indexOf("`", i + 1);
-      if (end !== -1) {
-        const code = document.createElement("code");
-        code.textContent = text.substring(i + 1, end);
-        p.appendChild(code);
-        i = end + 1;
-        continue;
-      }
-    }
-    
-    let nextBold = text.indexOf("**", i);
-    let nextCode = text.indexOf("`", i);
-    let nextSpecial = -1;
-    if (nextBold !== -1 && nextCode !== -1) {
-      nextSpecial = Math.min(nextBold, nextCode);
-    } else {
-      nextSpecial = nextBold !== -1 ? nextBold : nextCode;
-    }
-    
-    if (nextSpecial === -1) {
-      p.appendChild(document.createTextNode(text.substring(i)));
-      break;
-    } else {
-      p.appendChild(document.createTextNode(text.substring(i, nextSpecial)));
-      i = nextSpecial;
-    }
-  }
-  return p;
-}
-
-function parseBlogContent(text) {
-  const container = document.createDocumentFragment();
-  const lines = text.split(/\r?\n/);
-  
-  let currentParagraph = [];
-  let inCodeBlock = false;
-  let codeBlockLines = [];
-  let codeBlockLang = "";
-  
-  function flushParagraph() {
-    if (currentParagraph.length > 0) {
-      const pText = currentParagraph.join(" ").trim();
-      if (pText) {
-        container.appendChild(formatParagraph(pText));
-      }
-      currentParagraph = [];
-    }
-  }
-  
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    const trimmed = line.trim();
-    
-    if (inCodeBlock) {
-      if (trimmed.startsWith("```")) {
-        inCodeBlock = false;
-        const pre = document.createElement("pre");
-        const code = document.createElement("code");
-        if (codeBlockLang) {
-          code.className = `language-${codeBlockLang}`;
-        }
-        code.textContent = codeBlockLines.join("\n");
-        pre.appendChild(code);
-        container.appendChild(pre);
-        codeBlockLines = [];
-        codeBlockLang = "";
-      } else {
-        codeBlockLines.push(line);
-      }
-    } else {
-      if (trimmed.startsWith("```")) {
-        flushParagraph();
-        inCodeBlock = true;
-        codeBlockLang = trimmed.substring(3).trim();
-      } else if (trimmed === "") {
-        flushParagraph();
-      } else {
-        currentParagraph.push(line);
-      }
-    }
-  }
-  flushParagraph();
-  
-  return container;
-}
-
-function openBlogReader(post) {
-  const modal = document.getElementById("blog-modal");
-  const modalMeta = document.getElementById("blog-modal-meta");
-  const modalTitle = document.getElementById("blog-modal-title");
-  const modalBody = document.getElementById("blog-modal-body");
-  
-  if (!modal || !modalMeta || !modalTitle || !modalBody) return;
-  
-  // Clear previous values securely
-  modalMeta.textContent = "";
-  modalTitle.textContent = "";
-  modalBody.replaceChildren();
-  
-  // Populate title & meta instantly
-  modalTitle.textContent = post.title;
-  
-  const dateSpan = document.createElement("span");
-  dateSpan.textContent = post.date;
-  const readSpan = document.createElement("span");
-  readSpan.textContent = post.readTime;
-  modalMeta.appendChild(dateSpan);
-  modalMeta.appendChild(readSpan);
-  
-  // Show loading indicator
-  const loading = document.createElement("p");
-  loading.textContent = "Loading content...";
-  loading.style.color = "var(--text-muted)";
-  loading.style.fontFamily = "var(--font-mono)";
-  loading.style.fontSize = "0.85rem";
-  modalBody.appendChild(loading);
-  
-  // Display modal and lock body scrolling
-  modal.classList.add("active");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.classList.add("modal-open");
-  
-  // Fetch text file content
-  fetch(post.file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("HTTP error " + response.status);
-      }
-      return response.text();
-    })
-    .then(text => {
-      // Clear loading indicator
-      modalBody.replaceChildren();
-      // Render parsed paragraphs
-      modalBody.appendChild(parseBlogContent(text));
-    })
-    .catch(err => {
-      modalBody.replaceChildren();
-      const errorP = document.createElement("p");
-      errorP.textContent = "Failed to load article content. Please try again later.";
-      errorP.style.color = "#ef4444";
-      modalBody.appendChild(errorP);
-      console.error("Error loading blog post file:", err);
-    });
-}
-
-function closeBlogReader() {
-  const modal = document.getElementById("blog-modal");
-  if (!modal) return;
-  
-  modal.classList.remove("active");
-  modal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("modal-open");
-}
-
-// Setup Modal Event Listeners
-function setupBlogModal() {
-  const closeBtn = document.getElementById("blog-modal-close");
-  const backdrop = document.getElementById("blog-modal-backdrop");
-  
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeBlogReader);
-  }
-  if (backdrop) {
-    backdrop.addEventListener("click", closeBlogReader);
-  }
-  
-  // Close on Escape key press
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      closeBlogReader();
-    }
   });
 }
 
@@ -563,5 +363,4 @@ document.addEventListener("DOMContentLoaded", () => {
   renderRoadmap();
   setupScrollSpy();
   setupMobileMenu();
-  setupBlogModal();
 });

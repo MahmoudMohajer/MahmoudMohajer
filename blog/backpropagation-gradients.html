@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backpropagation Math: Manual Attention Gradients | Mahmoud Mohajer</title>
+  <meta name="description" content="Deriving the mathematical gradients of scaled dot-product attention step-by-step.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'self';">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+  <div class="blog-container">
+    <nav class="blog-nav">
+      <a href="../index.html" class="back-link">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Home
+      </a>
+    </nav>
+
+    <article>
+      <header class="post-header">
+        <div class="post-meta">
+          <span>April 2026</span>
+          <span>12 min read</span>
+        </div>
+        <h1 class="post-title">Backpropagation Math: Manual Attention Gradients</h1>
+      </header>
+
+      <section class="post-content">
+        <p>
+          Most deep learning practitioners rely on automatic differentiation (Autograd) in PyTorch or JAX. However, writing custom CUDA kernels or building deep learning frameworks from scratch requires manual derivation of backpropagation gradients.
+        </p>
+        <p>
+          Let's look at the Scaled Dot-Product Attention:
+        </p>
+        <p>
+          <code>Attention(Q, K, V) = softmax(Q K^T / sqrt(d_k)) V</code>
+        </p>
+        <p>
+          Let the intermediate softmax matrix be represented as <code>S</code>. Thus, the attention output is <code>A = S V</code>.
+        </p>
+        <p>
+          To backpropagate through this module, we start with the incoming gradient with respect to the output, <code>dL/dA</code>. We can compute the gradient with respect to <code>V</code> as:
+        </p>
+        <p>
+          <code>dL/dV = S^T (dL/dA)</code>
+        </p>
+        <p>
+          The gradient with respect to the attention scores <code>S</code> requires more care, as it involves the softmax activation:
+        </p>
+        <p>
+          <code>dL/dS = (dL/dA) V^T</code>
+        </p>
+        <p>
+          From there, we backpropagate through the softmax function using its Jacobian matrix, and finally compute the gradients with respect to <code>Q</code> and <code>K</code>. Deriving these expressions is a crucial step when writing custom performance kernels in low-level systems.
+        </p>
+      </section>
+
+      <footer class="post-footer">
+        <div>&copy; 2026 Mahmoud Mohajer</div>
+        <div><a href="../index.html">mahmoudmohajer.github.io</a></div>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>

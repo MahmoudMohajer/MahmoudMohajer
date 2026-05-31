@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decentralized Machine Learning: Verification Challenges | Mahmoud Mohajer</title>
+  <meta name="description" content="An analysis of trust assumptions, Proof of Learning, and ZKML verification in peer-to-peer compute networks.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; frame-ancestors 'self';">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+  <div class="blog-container">
+    <nav class="blog-nav">
+      <a href="../index.html" class="back-link">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back to Home
+      </a>
+    </nav>
+
+    <article>
+      <header class="post-header">
+        <div class="post-meta">
+          <span>March 2026</span>
+          <span>6 min read</span>
+        </div>
+        <h1 class="post-title">Decentralized Machine Learning: Verification Challenges</h1>
+      </header>
+
+      <section class="post-content">
+        <p>
+          Decentralized networks promise to democratize AI by pooling consumer-grade GPU resources. However, scaling training across untrusted nodes introduces a major security bottleneck: verification.
+        </p>
+        <p>
+          How do we verify that a node actually performed the forward and backward passes correctly, rather than submitting random noise or malicious gradients?
+        </p>
+        <p>
+          One approach is <strong>Proof of Learning</strong>. Nodes submit periodic checkpoints, and validators re-run small slices of the computation to verify matching states. However, floating-point non-determinism across different GPU architectures makes exact verification difficult.
+        </p>
+        <p>
+          Another frontier is <strong>Zero-Knowledge Machine Learning (ZKML)</strong>. By generating cryptographic proofs of execution, a node can prove mathematical correctness without the validator re-running the model. While current ZK proving overhead is high, optimization is moving rapidly, representing a key event horizon for open, decentralized intelligence.
+        </p>
+      </section>
+
+      <footer class="post-footer">
+        <div>&copy; 2026 Mahmoud Mohajer</div>
+        <div><a href="../index.html">mahmoudmohajer.github.io</a></div>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>

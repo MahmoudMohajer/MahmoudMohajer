@@ -1,7 +1,0 @@
-Decentralized networks promise to democratize AI by pooling consumer-grade GPU resources. However, scaling training across untrusted nodes introduces a major security bottleneck: verification.
-
-How do we verify that a node actually performed the forward and backward passes correctly, rather than submitting random noise or malicious gradients?
-
-One approach is **Proof of Learning**. Nodes submit periodic checkpoints, and validators re-run small slices of the computation to verify matching states. However, floating-point non-determinism across different GPU architectures makes exact verification difficult.
-
-Another frontier is **Zero-Knowledge Machine Learning (ZKML)**. By generating cryptographic proofs of execution, a node can prove mathematical correctness without the validator re-running the model. While current ZK proving overhead is high, optimization is moving rapidly, representing a key event horizon for open, decentralized intelligence.
