@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahmoud Mohajer | AI Engineer &amp; Researcher</title>
+  
+  <!-- Content Security Policy (CSP) for security enforcement -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; frame-ancestors 'self';">
+  
+  <!-- Primary SEO Metadata -->
+  <meta name="description" content="Personal website of Mahmoud Mohajer, self-taught AI engineer and researcher from Afghanistan. Focused on low-level machine learning systems, CUDA programming, and decentralized AI infrastructure.">
+  <meta name="keywords" content="Mahmoud Mohajer, AI Engineer, AI Researcher, CUDA, Machine Learning Systems, Deep Learning, Afghanistan AI, Decentralized AI">
+  <meta name="author" content="Mahmoud Mohajer">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahmoudmohajer.github.io/">
+  <meta property="og:title" content="Mahmoud Mohajer | AI Engineer &amp; Researcher">
+  <meta property="og:description" content="Self-taught AI engineer focused on low-level systems, CUDA programming, and decentralized compute networks.">
+  <meta property="og:image" content="assets/social_card.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://mahmoudmohajer.github.io/">
+  <meta property="twitter:title" content="Mahmoud Mohajer | AI Engineer &amp; Researcher">
+  <meta property="twitter:description" content="Self-taught AI engineer focused on low-level systems, CUDA programming, and decentralized compute networks.">
+  <meta property="twitter:image" content="assets/social_card.png">
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="alternate icon" type="image/x-icon" href="assets/favicon.ico">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Mobile Top Navigation Header -->
+  <header class="mobile-header">
+    <div class="mobile-brand">
+      <h1>Mahmoud Mohajer</h1>
+      <span>AI Engineering &amp; Research</span>
+    </div>
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM3 12C3 11.4477 3.44772 11 4 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H4C3.44772 13 3 12.5523 3 12ZM3 18C3 17.4477 3.44772 17 4 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H4C3.44772 19 3 18.5523 3 18Z"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay Nav Menu -->
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+    <ul class="mobile-nav-list">
+      <li><a href="#hero" class="active"><span class="nav-num">00.</span> Home</a></li>
+      <li><a href="#about"><span class="nav-num">01.</span> About</a></li>
+      <li><a href="#focus"><span class="nav-num">02.</span> Focus</a></li>
+      <li><a href="#projects"><span class="nav-num">03.</span> Projects</a></li>
+      <li><a href="#notes"><span class="nav-num">04.</span> Research Notes</a></li>
+      <li><a href="#roadmap"><span class="nav-num">05.</span> Roadmap</a></li>
+      <li><a href="#contact"><span class="nav-num">06.</span> Contact</a></li>
+    </ul>
+    <div class="status-badge" style="margin-top: 2rem;">
+      <span class="status-dot"></span>
+      <span>Learning ML Systems</span>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <!-- Desktop Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="profile-container">
+        <div class="avatar-placeholder">MM</div>
+        <div class="nav-brand">
+          <h1>Mahmoud Mohajer</h1>
+          <div class="subtitle">AI Systems &amp; Research</div>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#hero" class="active"><span class="nav-num">00.</span> Home</a></li>
+            <li><a href="#about"><span class="nav-num">01.</span> About</a></li>
+            <li><a href="#focus"><span class="nav-num">02.</span> Focus</a></li>
+            <li><a href="#projects"><span class="nav-num">03.</span> Projects</a></li>
+            <li><a href="#notes"><span class="nav-num">04.</span> Research Notes</a></li>
+            <li><a href="#roadmap"><span class="nav-num">05.</span> Roadmap</a></li>
+            <li><a href="#contact"><span class="nav-num">06.</span> Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Learning ML Systems</span>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/MahmoudMohajer" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+            <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="mailto:mahmoud@example.com" aria-label="Send Email">
+            <svg viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="main-content">
+      <div class="content-wrapper">
+        
+        <!-- Hero Section -->
+        <section id="hero">
+          <span class="section-label">00. Introduction</span>
+          <h2 class="hero-name">Mahmoud Mohajer</h2>
+          <p class="hero-tagline">Self-taught AI Engineer &amp; Researcher.</p>
+          <p class="hero-mission">
+            I am driven by a long-term goal to understand intelligence by building it. 
+            Currently studying low-level machine learning systems, writing CUDA kernels, 
+            and exploring decentralized computational networks from first principles.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get In Touch</a>
+            <a href="https://github.com/MahmoudMohajer" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="vertical-align: middle; margin-right: 4px;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>GitHub
+            </a>
+          </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+          <span class="section-label">01. Background</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                I am a self-taught AI engineer and researcher based in Afghanistan. Driven by a deep-seated curiosity about how systems acquire, process, and generalize patterns, I chose the path of independent study. To me, intelligence research is the most challenging and meaningful engineering problem of our time.
+              </p>
+              <p>
+                My philosophy is grounded in <strong>first-principles learning</strong>. I believe that to truly master complex computational tools, one must understand the underlying layers—from transistor limitations and memory hierarchies to the linear algebra governing backpropagation. 
+              </p>
+              <p>
+                As a solo founder-developer, I design and write systems from scratch. By rejecting reliance on black-box frameworks and instead rebuilding basic building blocks—whether a custom tensor structure, a compiler layout, or a P2P networking handler—I seek to cultivate deep expertise in AI infrastructure and high-performance engineering.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Current Focus Section -->
+        <section id="focus">
+          <span class="section-label">02. Active Studies</span>
+          <h2 class="section-title">Current Focus</h2>
+          <div class="focus-grid">
+            <div class="focus-card">
+              <div class="focus-header">
+                <div class="focus-icon">
+                  <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"/><line x1="6" y1="12" x2="18" y2="12"/><line x1="12" y1="6" x2="12" y2="18"/></svg>
+                </div>
+                <h3 class="focus-title">Low-Level AI Engineering</h3>
+              </div>
+              <p class="focus-desc">Writing custom CUDA kernels, optimizing GPU global/shared memory bandwidth, profiling latency using Nsight, and mastering hardware constraints.</p>
+            </div>
+            
+            <div class="focus-card">
+              <div class="focus-header">
+                <div class="focus-icon">
+                  <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                </div>
+                <h3 class="focus-title">Machine Learning Systems</h3>
+              </div>
+              <p class="focus-desc">Studying compiler frameworks (Triton, MLIR), network transport layers for distributed training, and optimizing computational graphs.</p>
+            </div>
+            
+            <div class="focus-card">
+              <div class="focus-header">
+                <div class="focus-icon">
+                  <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3 class="focus-title">Decentralized Infrastructure</h3>
+              </div>
+              <p class="focus-desc">Exploring distributed peer-to-peer compute networks, fault-tolerant training coordination, and zero-knowledge compute verification.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+          <span class="section-label">03. Code &amp; Systems</span>
+          <h2 class="section-title">Projects</h2>
+          <div class="cards-grid" id="projects-grid">
+            <!-- Projects injected by JS safely -->
+          </div>
+        </section>
+
+        <!-- Research Notes Section -->
+        <section id="notes">
+          <span class="section-label">04. Technical Writing</span>
+          <h2 class="section-title">Research Notes</h2>
+          <div class="cards-grid" id="notes-grid">
+            <!-- Notes injected by JS safely -->
+          </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap">
+          <span class="section-label">05. Timeline</span>
+          <h2 class="section-title">Development Roadmap</h2>
+          <div class="roadmap-timeline" id="roadmap-timeline">
+            <!-- Roadmap injected by JS safely -->
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+          <span class="section-label">06. Network</span>
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="contact-container">
+            <p class="contact-text">
+              I am open to technical discussions regarding low-level AI systems, CUDA optimization, and decentralized training protocols. Feel free to reach out via email or connect with me on GitHub.
+            </p>
+            <div class="contact-methods">
+              <a href="mailto:mahmoud@example.com" class="contact-method-card">
+                <div class="contact-method-icon">
+                  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div class="contact-method-info">
+                  <span class="contact-method-label">Email</span>
+                  <span class="contact-method-value">mahmoud@example.com</span>
+                </div>
+              </a>
+              
+              <a href="https://github.com/MahmoudMohajer" target="_blank" rel="noopener noreferrer" class="contact-method-card">
+                <div class="contact-method-icon">
+                  <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                </div>
+                <div class="contact-method-info">
+                  <span class="contact-method-label">GitHub</span>
+                  <span class="contact-method-value">github.com/MahmoudMohajer</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Global Footer -->
+  <footer>
+    <div>&copy; 2026 Mahmoud Mohajer. MIT License.</div>
+    <div>Built from scratch. No frameworks.</div>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
