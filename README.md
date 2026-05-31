@@ -8,9 +8,9 @@ Afghanistan 🇦🇫
 
 ## 📌 About Me
 
-I am a self-taught AI engineer and researcher driven by a long-term goal: **to understand intelligence by creating it**. 
+I am a self-taught AI engineer and researcher driven by a long-term goal: **to understand intelligence by creating it**.
 
-My engineering philosophy is built on **first-principles learning**. I believe in mastering systems from the ground up—rebuilding basic structures, operators, compilers, and nodes from scratch to truly understand the low-level mechanics of computational intelligence.
+I am learning the **entire stack of AI/ML** and finding my way through it. My approach is to balance hands-on, practical engineering (from GPU kernels up to transformer architectures) with a broader theoretical view of the event horizon of intelligence.
 
 🔗 **Website:** [mahmoudmohajer.github.io](https://mahmoudmohajer.github.io)  
 ✉️ **Contact:** [mahmohajer@proton.me](mailto:mahmohajer@proton.me)  
@@ -21,9 +21,9 @@ My engineering philosophy is built on **first-principles learning**. I believe i
 
 ## 🛠️ Technical Focus & Interests
 
-- **Low-Level AI Engineering**: Writing custom CUDA kernels, optimizing memory bandwidth, profiling GPU execution paths.
-- **Machine Learning Systems**: Studying compiler infrastructures (like Triton and MLIR) and distributed compute primitives.
-- **Decentralized AI**: Investigating P2P compute sharing, network orchestration, and verification protocols for distributed training.
+- **AI & ML Full Stack**: Mastering the vertical pipeline: from dataset mapping and model architectures down to raw CUDA kernel operations.
+- **Machine Learning Systems**: Bridging systems and algorithms by studying compilers (Triton/MLIR) and distributed training scaling.
+- **Decentralized Infrastructure**: Exploring P2P compute networks, trustless training orchestration, and zero-knowledge verification of compute.
 
 ---
 
@@ -37,6 +37,6 @@ My engineering philosophy is built on **first-principles learning**. I believe i
 
 ## 📅 Roadmap
 
-1. **Low-Level Execution**: Deepening expertise in CUDA optimization, hardware latency mitigation, and compiler pipelines.
-2. **Distributed Training**: Learning node sync mechanics (NCCL, data/model parallelism, pipeline parallelism) for cluster training.
-3. **Decentralized Infrastructure**: Researching validation proofs (zero-knowledge proofs, trust architectures) for peer-to-peer compute networks.
+1. **Full-Stack Execution**: Exploring models, hardware layouts, custom operators, compiler tools, and high-level training systems.
+2. **Scale & Performance**: Studying cluster-scale networking primitives (NCCL), distributed parallelisms, and data pipelining.
+3. **Open Collective Intelligence**: Researching cryptographic verifications and local compute coordination protocols to map the future of decentralized AI.

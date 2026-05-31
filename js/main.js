@@ -55,8 +55,8 @@ const researchNotes = [
 const roadmapItems = [
   {
     time: "CURRENT FOCUS",
-    title: "Low-Level Machine Learning Systems",
-    desc: "Mastering CUDA kernel optimizations, memory hierarchies, and writing custom operators. Studying compiler pipelines (like Triton and MLIR) and hardware-level execution models.",
+    title: "Full-Stack AI & ML Systems",
+    desc: "Learning the entire stack of AI/ML. Combines high-level architectures with low-level CUDA kernels and hardware constraints to build a complete, practical picture of modern intelligence systems.",
     active: true
   },
   {
