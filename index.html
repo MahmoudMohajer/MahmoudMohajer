@@ -57,7 +57,7 @@
       <li><a href="#about"><span class="nav-num">01.</span> About</a></li>
       <li><a href="#focus"><span class="nav-num">02.</span> Focus</a></li>
       <li><a href="#projects"><span class="nav-num">03.</span> Projects</a></li>
-      <li><a href="#notes"><span class="nav-num">04.</span> Research Notes</a></li>
+      <li><a href="#blog"><span class="nav-num">04.</span> Blog &amp; Notes</a></li>
       <li><a href="#roadmap"><span class="nav-num">05.</span> Roadmap</a></li>
       <li><a href="#contact"><span class="nav-num">06.</span> Contact</a></li>
     </ul>
@@ -83,7 +83,7 @@
             <li><a href="#about"><span class="nav-num">01.</span> About</a></li>
             <li><a href="#focus"><span class="nav-num">02.</span> Focus</a></li>
             <li><a href="#projects"><span class="nav-num">03.</span> Projects</a></li>
-            <li><a href="#notes"><span class="nav-num">04.</span> Research Notes</a></li>
+            <li><a href="#blog"><span class="nav-num">04.</span> Blog &amp; Notes</a></li>
             <li><a href="#roadmap"><span class="nav-num">05.</span> Roadmap</a></li>
             <li><a href="#contact"><span class="nav-num">06.</span> Contact</a></li>
           </ul>
@@ -199,12 +199,12 @@
           </div>
         </section>
 
-        <!-- Research Notes Section -->
-        <section id="notes">
+        <!-- Blog & Notes Section -->
+        <section id="blog">
           <span class="section-label">04. Technical Writing</span>
-          <h2 class="section-title">Research Notes</h2>
-          <div class="cards-grid" id="notes-grid">
-            <!-- Notes injected by JS safely -->
+          <h2 class="section-title">Blog &amp; Notes</h2>
+          <div class="cards-grid" id="blog-grid">
+            <!-- Blog posts injected by JS safely -->
           </div>
         </section>
 
@@ -278,6 +278,25 @@
     <div>&copy; 2026 Mahmoud Mohajer. MIT License.</div>
     <div>Built from scratch. No frameworks.</div>
   </footer>
+
+  <!-- Blog Reader Modal Overlay -->
+  <div class="blog-modal" id="blog-modal" aria-hidden="true" role="dialog">
+    <div class="blog-modal-backdrop" id="blog-modal-backdrop"></div>
+    <div class="blog-modal-content">
+      <button class="blog-modal-close" id="blog-modal-close" aria-label="Close reader view">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <article class="blog-post-view">
+        <header class="blog-post-header">
+          <div class="blog-post-meta" id="blog-modal-meta"></div>
+          <h2 class="blog-post-title" id="blog-modal-title"></h2>
+        </header>
+        <div class="blog-post-body" id="blog-modal-body">
+          <!-- Paragraphs injected by JS safely -->
+        </div>
+      </article>
+    </div>
+  </div>
 
   <!-- Application Logic -->
   <script src="js/main.js"></script>
