@@ -13,7 +13,7 @@ I am a self-taught AI engineer and researcher driven by a long-term goal: **to u
 My engineering philosophy is built on **first-principles learning**. I believe in mastering systems from the ground up—rebuilding basic structures, operators, compilers, and nodes from scratch to truly understand the low-level mechanics of computational intelligence.
 
 🔗 **Website:** [mahmoudmohajer.github.io](https://mahmoudmohajer.github.io)  
-✉️ **Contact:** [mahmoud@example.com](mailto:mahmoud@example.com)
+✉️ **Contact:** [mahmohajer@proton.me](mailto:mahmohajer@proton.me)
 
 ---
 
