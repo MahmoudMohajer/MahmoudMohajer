@@ -6,25 +6,39 @@
 // Data collections
 const projects = [
   {
-    title: "CUDA Matrix Optimizations",
-    description: "An implementation of custom GEMM (General Matrix Multiply) kernels in CUDA. Focuses on shared memory tiling, thread-level cache utilization, and avoiding bank conflicts. Benchmarked against cuBLAS.",
-    tags: ["CUDA", "C++", "High-Performance Computing"],
-    github: "https://github.com/MahmoudMohajer",
-    category: "System Engineering"
+    title: "100-Day GPU Programming Challenge",
+    description: "Writing custom C++/CUDA kernels compiled with nvcc to implement and accelerate deep learning primitives from scratch, focusing on memory hierarchy and thread synchronization.",
+    tags: ["C++", "CUDA", "nvcc", "PyTorch"],
+    github: "https://github.com/MahmoudMohajer/Hundred-Day-GPU-Challenge",
+    category: "Systems & Acceleration"
   },
   {
-    title: "Toy Transformer from Scratch",
-    description: "A bare-metal educational implementation of a GPT-style decoder-only transformer model in Python and pure NumPy, written to master self-attention backpropagation and layer normalization from first-principles.",
-    tags: ["Python", "NumPy", "Deep Learning"],
-    github: "https://github.com/MahmoudMohajer",
-    category: "Machine Learning"
+    title: "GOAT SDK Plugins",
+    description: "Developed Starknet plugins enabling AI agents to autonomously query the blockchain, route token swaps via Avnu DEX, and execute cross-chain transfers using ZeroDev.",
+    tags: ["TypeScript", "GOAT SDK", "Starknet.js", "Viem"],
+    github: "https://github.com/goat-sdk/goat",
+    category: "Web3 & Agent Systems"
   },
   {
-    title: "Decentralized Compute Discovery Protocol",
-    description: "A prototype peer-to-peer discovery node designed to map available local GPU hardware configurations over a distributed local network, exploring metadata indexing for decentralized training.",
-    tags: ["Go", "Networking", "Distributed Systems"],
-    github: "https://github.com/MahmoudMohajer",
-    category: "Infrastructure"
+    title: "Orion Framework ONNX Operators",
+    description: "Refactored core numerical representations and built low-level ONNX-equivalent operators in Cairo to enable provable, zero-knowledge machine learning (zkML) execution.",
+    tags: ["Cairo", "ONNX", "Python", "Orion Compiler"],
+    github: "https://github.com/gizatechxyz/orion",
+    category: "ML Compilers & ZK"
+  },
+  {
+    title: "Concrete-ML FHE Lasso Regression",
+    description: "Designed privacy-preserving machine learning inference pipelines using Concrete-ML to execute Lasso and Penalized Linear Regression over fully homomorphically encrypted datasets.",
+    tags: ["Python", "Concrete-ML", "Scikit-learn", "FHE"],
+    github: "https://github.com/Quadratic-Labs/fhe-lasso-regression",
+    category: "Privacy-Preserving ML"
+  },
+  {
+    title: "Unsupervised Sybil Account Detector",
+    description: "Built unsupervised K-Means clustering pipelines to analyze Gitcoin donation transaction graphs, segmenting donor profiles to detect anomalous Sybil funding attacks.",
+    tags: ["Python", "Scikit-learn", "Pandas", "NumPy"],
+    github: "https://github.com/MahmoudMohajer/sybil-account-detector",
+    category: "Machine Learning & Fraud"
   }
 ];
 
@@ -55,20 +69,20 @@ const blogPosts = [
 const roadmapItems = [
   {
     time: "CURRENT FOCUS",
-    title: "Full-Stack AI & ML Systems",
-    desc: "Learning the entire stack of AI/ML. Combines high-level architectures with low-level CUDA kernels and hardware constraints to build a complete, practical picture of modern intelligence systems.",
+    title: "GPU Computing & Compiler Operators",
+    desc: "Writing custom CUDA kernels and refactoring deep learning compiler operations to optimize execution speed and numerical precision from first principles.",
     active: true
   },
   {
     time: "NEXT MILESTONE",
-    title: "Distributed AI Training Infrastructures",
-    desc: "Understanding scale-up mechanics: data parallelism, model parallelism, parameter servers, NCCL primitives, and fault-tolerant orchestration in distributed environments.",
+    title: "Distributed AI Scale & Performance",
+    desc: "Studying distributed scaling mechanics: data parallelism, model parallelism, parameter servers, and cluster-scale communication primitives like NCCL.",
     active: false
   },
   {
     time: "LONG TERM GOAL",
-    title: "Decentralized Compute & Open Intelligence",
-    desc: "Researching secure, trustless protocol designs for decentralized training networks. Investigating how cryptographic verification and local compute nodes can build open-source artificial intelligence.",
+    title: "Verifiable & Decentralized Intelligence",
+    desc: "Researching secure, trustless protocol designs for decentralized training networks. Investigating how cryptographic verification and local compute nodes coordinate open-source AI.",
     active: false
   }
 ];
